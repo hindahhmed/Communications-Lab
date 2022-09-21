@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15417342d295584c702",applicationID:"525287958"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="qrnrO3M198PVXn88dxTPBLrmxVmKeHlRS5PCbzaS">
+<title>close icon grey | Free SVG</title>
+
+<meta name="description" content="Simple gray X icon">
+<meta name="author" content="Vedran">
+
+<link href='https://fonts.googleapis.com' rel=’preconnect’ crossorigin>
+<link href='https://www.google-analytics.com' rel=’preconnect’ crossorigin>
+<link href='https://pagead2.googlesyndication.com' rel=’preconnect’ crossorigin>
+<link href='https://partner.googleadservices.com' rel=’preconnect’ crossorigin>
+<link href='https://googleads.g.doubleclick.net' rel=’preconnect’ crossorigin>
+<link href='https://www.googletagservices.com' rel=’preconnect’ crossorigin>
+<link media="all" type="text/css" rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css    ">
+
+
+<link media="all" type="text/css" rel="stylesheet" href="https://freesvg.org/css/frontend.css?id=c0d532e6b7bfbb63df9e">
+<link media="all" type="text/css" rel="stylesheet" href="https://freesvg.org/js/select2/select2.min.css">
+<script data-ad-client="ca-pub-4767662663033227" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>
+            window.Laravel = {"csrfToken":"qrnrO3M198PVXn88dxTPBLrmxVmKeHlRS5PCbzaS"}        </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147217457-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147217457-1');
+</script>
+</head>
+<body id="app-layout">
+<div id="app">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top black-bg">
+<div class="container">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsMain" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="https://freesvg.org"><img height="40px" src="/img/svg-logo-4.png" /></a>
+<div class="collapse navbar-collapse" id="navbarsMain">
+<div class="navbar-nav mr-auto">
+<a class="nav-link " href="https://freesvg.org">
+<i class="fa fa-home"></i>
+</a>
+<a class="nav-link " href="/pages/about-us">About</a>
+<a class="nav-link" rel="nofollow" href="https://creativecommons.org/publicdomain/zero/1.0/ " target="_blank">License</a>
+<a class="nav-link " href="/contact">Contact</a>
+<a class="nav-link " href="https://forum.freesvg.org" target="_blank">Forum</a>
+</div>
+<div class="navbar-nav">
+<a class="nav-link " href="https://freesvg.org/login">Login</a>
+<a class="nav-link " href="https://freesvg.org/register">Register</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="highlight">
+<div class="cover  bg-overlay-black-50" style="background-image: url(/img/detail-background-svg.jpg);    background-size: cover;">
+<div class="slider-content-middle">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12">
+<div class="slider-content text-center">
+<h1 class="text-white mt-20 d-none d-lg-block"> close icon grey </h1>
+<form action="/search/" method="POST">
+<div class="row justify-content-center form pb-20 mt-50">
+<div class="col-md-5 ">
+<input type="search" class="form-control" name="q" placeholder="Search here">
+<p class="d-block mt-5 popular">Popular SVG vectors:
+<a href="https://freesvg.org/tag/War">War </a>,
+<a href="https://freesvg.org/tag/peace">Peace </a>,
+<a href="https://freesvg.org/tag/cricut-svg">Cricut svg </a>,
+<a href="https://freesvg.org/tag/Ukraine">Ukraine</a>,
+<a href="https://freesvg.org/tag/love">Love </a>,
+<a href="https://freesvg.org/search?query=svg%20cut&q=svg%20cut">Svg cut file </a>
+</p>
+</div>
+<div class="col-lg-2 col-sm-3 col-xs-12 mt-sm-20">
+<input type="submit" class="button btn-block" value="Search">
+</div>
+<input type="hidden" name="_token" value="qrnrO3M198PVXn88dxTPBLrmxVmKeHlRS5PCbzaS"> </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="main-container container-fluid py-4">
+<div class="content">
+<div class="main-body-wrapper">
+<div class='main-body'>
+<div class='page-title-wrapper'>
+<div class="container-fluid mb-40 text-center">
+<div style="color:#999;text-align: center;font-size:12px">
+<span>
+Advertisements
+</span>
+</div>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4767662663033227" data-ad-slot="5687551507"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<h2>close icon grey</h2>
+<div class='row-fluid detail-wrapper'>
+<div class='main-image'>
+<div class='main-image-photo text-center'>
+<div itemscope itemtype="http://schema.org/ImageObject">
+<meta itemprop="license" content="https://creativecommons.org/publicdomain/zero/1.0/">
+<meta itemprop="description" content=" Simple gray X icon">
+<meta itemprop="acquireLicensePage" content="https://creativecommons.org/publicdomain/zero/1.0/">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="isFamilyFriendly" content="true">
+<meta itemprop="representativeOfPage" content="true">
+<meta itemprop="thumbnailUrl" content="https://freesvg.org/storage/img/thumb/1544641784.png">
+<meta itemprop="contentUrl" content="https://freesvg.org/img/1544641784.png">
+<meta itemprop="caption" content=" close icon grey">
+</div>
+<img itemprop="contentUrl" src="/img/1544641784.png" alt="close icon grey" class='vec_veliki'>
+</div>
+<div class="download">
+<a href="/download/141612" class="btn btn-green btn-lg">
+Download SVG </a></div>
+<div class="download">
+<a href="https://freesvg.org/converts/141612/2400" class="btn btn-blue btn-sm pt-2 pb-2">
+Large PNG <small>2400px	</small> </a>
+<a href="https://freesvg.org/converts/141612/300" class="btn btn-blue btn-sm pt-2 pb-2">
+Small PNG <small>300px	</small> </a>
+</div>
+</div>
+<div class="sponsored-main-detail">
+<div class="istock-main-detail">
+<div class="istock">
+<div class="istock-header"><img src="/img/sponsor_shutterstock.png" alt="">
+<p>
+<a style="color:#1a1a1a;text-decoration: underline" href="https://shutterstock.7eer.net/c/2022575/1424089/1305" id="919290">
+Get 15% off at Shutterstock! Use code: FSVG15 at checkout! (Valid until 1/31/23))</a>
+<img height="0" width="0" src="https://shutterstock.7eer.net/i/2022575/1424089/1305" style="position:absolute;visibility:hidden;" border="0" />
+<div class="clearfix"></div>
+</div>
+<div class="istock-img">
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1684959118">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb9.shutterstock.com/thumb_large/255158771/1684959118/stock-vector-cancel-button-icon-cancel-button-vector-on-gray-background-1684959118.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D405011779">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/3673289/405011779/stock-vector-door-icon-in-trendy-flat-style-isolated-on-grey-background-open-door-symbol-for-your-web-site-405011779.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D74640979">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb9.shutterstock.com/thumb_large/498844/74640979/stock-vector-four-satined-smooth-validation-stickers-with-drop-gray-shadow-on-white-eps-74640979.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D2111837324">
+<div style="max-width:150px; height:37.333333333333px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/292151567/2111837324/stock-vector-black-keyhole-icon-isolated-on-white-background-key-of-success-solution-keyhole-express-the-2111837324.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D64299460">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/83143/64299460/stock-vector-basic-web-icons-grey-solid-series-64299460.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D64340056">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/83143/64340056/stock-vector-image-viewer-web-icons-grey-solid-series-64340056.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D66448045">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb7.shutterstock.com/thumb_large/193102/66448045/stock-vector-document-icons-on-gray-buttons-66448045.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D659929456">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb1.shutterstock.com/thumb_large/4077001/659929456/stock-vector-exit-close-x-icon-in-trendy-flat-style-isolated-on-white-background-symbol-for-your-design-logo-ui-659929456.jpg')"></div></a>
+</div>
+</div>
+<div class="ss-photo">
+<div class="photo-wrap">
+<a target="_blank" href="https://shutterstock.7eer.net/P9oaj?subId1=freesvg&amp;u=https%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D559119352">
+<div style="max-width:150px; height:150px; overflow:hidden; background-image: url('https://thumb9.shutterstock.com/thumb_large/3036470/559119352/stock-vector-cross-sign-black-element-gray-x-icon-isolated-on-white-background-simple-mark-graphic-design-559119352.jpg')"></div></a>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class='photo-details'>
+<div class='row mb-5'>
+<div class='col-sm-12'>
+<h4>Share</h4>
+<div class="footer-social-big mt-20 mb-20 panel" data-id="141612">
+<ul>
+<li class="facebook mr-5"><a href="#" onclick="    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;" alt="FB"><i class="fa fa-facebook"> </i><span>Facebook</span></a> </li>
+<li class="pinterest mr-5"><a href="//pinterest.com/pin/create/button/?url=https%3A%2F%2Ffreesvg.org%2F1544641784&media=https%3A%2F%2Ffreesvg.org%2Fimg%2F1544641784.png&description=close icon grey" data-pin-do="buttonPin" data-pin-config="none"> <i class="fa fa-pinterest"> </i><span>Pinterest</span> </a></li>
+<li class="twitter mr-5"><a href="https://twitter.com/share?text=https://freesvg.org/1544641784"> <i class="fa fa-twitter"> </i><span>Twitter</span> </a></li>
+<li class="like mr-5"><a> <i id="like141612" class="fa fa-heart "></i> </a> <span id="like141612-bs3">0</span></li>
+<div class="like-btn">
+</div>
+</ul>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h4>Description </h4>
+<p>
+Simple gray X icon
+</p>
+</div>
+</div>
+<div class='row'>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h4>License</h4>
+<p>
+<a about="https://freesvg.org/img/1544641784.png" rel="license" href="https://creativecommons.org/licenses/publicdomain/" target="_blank">Public Domain</a></p>
+</div>
+</div>
+<div class='row'>
+<div class="col-lg-6">
+<h4>More about SVG</h4>
+<p><i class="fa fa-eye"></i>
+Size	0.00 MB</p>
+<p><i class="fa fa-calendar"></i>
+Date:	05/06/2020 </p>
+<p>
+<i class="fa fa-download"></i> No. of downloads:	2398 </p>
+</div>
+<div class="col-lg-6">
+<h4> SVG published by</h4>
+<p>
+<a href="https://freesvg.org/by/OpenClipart"> OpenClipart	 </a> </p>
+<p>
+<p> <i class="fa fa-key"></i> SVG ID: 141612 </p>
+</div>
+</div
+             
+						
+						
+							<div class='row single-tags'>
+<div class='col-sm-12'>
+<h4>Tags</h4>
+<div class='single-photo-tags'>
+<span><a href="https://freesvg.org/tag/cancel">cancel</a></span>
+<span><a href="https://freesvg.org/tag/close">close</a></span>
+<span><a href="https://freesvg.org/tag/font">font</a></span>
+<span><a href="https://freesvg.org/tag/gray">gray</a></span>
+<span><a href="https://freesvg.org/tag/icon">icon</a></span>
+<span><a href="https://freesvg.org/tag/line">line</a></span>
+<span><a href="https://freesvg.org/tag/Logo">Logo</a></span>
+<span><a href="https://freesvg.org/tag/simple">simple</a></span>
+<span><a href="https://freesvg.org/tag/symbol">symbol</a></span>
+<span><a href="https://freesvg.org/tag/material-property">Material property</a></span>
+<span><a href="https://freesvg.org/tag/remix-242815">remix+242815</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='clearfix'></div>
+<div id='photos' class='related-photos'>
+<h3> Related SVG images</h3>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="ruby-logo">
+<img src="/storage/img/thumb/Ruby_logo.png" alt="Ruby logo" title="Ruby logo">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1544761977">
+<img src="/storage/img/thumb/1544761977.png" alt="Close Icon Grey handcoded" title="Close Icon Grey handcoded">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="emyller-close-button">
+<img src="/storage/img/thumb/emyller-close-button.png" alt="close button" title="close button">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="a0de84f8">
+<img src="/storage/img/thumb/a0de84f8.png" alt="a0de84f8" title="a0de84f8">
+</a>
+</div></div>
+<div class="photo text-center">
+ <div class="photo-thumbnail-wrap">
+<a href="1472534437">
+<img src="/storage/img/thumb/1472534437.png" alt="No Steering Wheel Driver Icon" title="No Steering Wheel Driver Icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1544644548">
+<img src="/storage/img/thumb/1544644548.png" alt="arrow up grey" title="arrow up grey">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1496637751">
+<img src="/storage/img/thumb/1496637751.png" alt="Information Icon" title="Information Icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="icon-multimedia-blue-ffw">
+<img src="/storage/img/thumb/icon.multimedia.blue.ffw.png" alt="Icon Blue Multimedia FFW" title="Icon Blue Multimedia FFW">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="msf-logo">
+<img src="/storage/img/thumb/MSF-logo.png" alt="MSF logo" title="MSF logo">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="logo-drawing">
+<img src="/storage/img/thumb/mono-koffice.png" alt="Logo drawing" title="Logo drawing">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="file-open-icon">
+<img src="/storage/img/thumb/mono-resfileopen.png" alt="File open icon" title="File open icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="text-editor-icon-clip-art">
+<img src="/storage/img/thumb/primary-adept-sourceseditor.png" alt="Text editor icon clip art" title="Text editor icon clip art">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1544761480">
+<img src="/storage/img/thumb/1544761480.png" alt="Close icon" title="Close icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="7z">
+<img src="/storage/img/thumb/7z.png" alt="7zip" title="7zip">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1553127832">
+<img src="/storage/img/thumb/1553127832.png" alt="TikTok icon" title="TikTok icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="mono-mute-64315">
+<img src="/storage/img/thumb/mono-mute.png" alt="mono mute" title="mono mute">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="loading-icon-with-fade">
+<img src="/storage/img/thumb/Loading_icon_with_fade.png" alt="Loading icon with fade" title="Loading icon with fade">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="pyfa-scalable-2-inkscape-svg">
+<img src="/storage/img/thumb/Pyfa-scalable-2-Inkscape-svg.png" alt="Pyfa scalable 2 Inkscape svg" title="Pyfa scalable 2 Inkscape svg">
+</a>
+</div></div>
+
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="lowercase-j">
+<img src="/storage/img/thumb/lowercase-j.png" alt="lowercase j" title="lowercase j">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="icon-multimedia-blue-rew">
+<img src="/storage/img/thumb/icon.multimedia.blue.rew.png" alt="Icon Blue Multimedia REW" title="Icon Blue Multimedia REW">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="mono-kiosktool-63138">
+<img src="/storage/img/thumb/mono-kiosktool.png" alt="mono kiosktool" title="mono kiosktool">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="mono-kmahjongg-63217">
+<img src="/storage/img/thumb/mono-kmahjongg.png" alt="mono kmahjongg" title="mono kmahjongg">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="mono-kshisen-63575">
+<img src="/storage/img/thumb/mono-kshisen.png" alt="mono kshisen" title="mono kshisen">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="mono-progress-64886">
+<img src="/storage/img/thumb/mono-progress.png" alt="mono progress" title="mono progress">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="hackfest-boston-2018-logo">
+<img src="/storage/img/thumb/hackfest-2018IIII.png" alt="Hackfest Boston 2018 Logo" title="Hackfest Boston 2018 Logo">
+</a>
+ </div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1533918102">
+<img src="/storage/img/thumb/1533918102.png" alt="Icon" title="Icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="anselmus-green-checkmark-and-red-minus-1">
+<img src="/storage/img/thumb/Anselmus-Green-Checkmark-and-Red-Minus-1.png" alt="Green Checkmark and Red Minus" title="Green Checkmark and Red Minus">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1346411546">
+<img src="/storage/img/thumb/1346411546.png" alt="location map icon" title="location map icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1529646133">
+<img src="/storage/img/thumb/1529646133.png" alt="Proof of Hardware" title="Proof of Hardware">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="simple-emoticon-135535">
+<img src="/storage/img/thumb/Simple-Emoticon.png" alt="Simple Emoticon" title="Simple Emoticon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1418161967">
+<img src="/storage/img/thumb/1418161967.png" alt="Simple altitude icon with min/max indicator" title="Simple altitude icon with min/max indicator">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1534967302">
+<img src="/storage/img/thumb/1534967302.png" alt="synchronization error" title="synchronization error">
+
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="ic-airline-seat-recline-extra-black-24px">
+<img src="/storage/img/thumb/ic_airline_seat_recline_extra_black_24px.png" alt="Airline seat recline icon extra black 24px" title="Airline seat recline icon extra black 24px">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="altitude-icon">
+<img src="/storage/img/thumb/altitude-icon.png" alt="altitude icon" title="altitude icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1429747035">
+<img src="/storage/img/thumb/1429747035.png" alt="House icon" title="House icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="binary-icon-umber-transparent">
+<img src="/storage/img/thumb/Binary-Icon-Umber-Transparent.png" alt="Binary Icon Umber Transparent" title="Binary Icon Umber Transparent">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="witchlines-simple-key">
+<img src="/storage/img/thumb/witchlines-Simple-key.png" alt="Simple key" title="Simple key">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="dustin-w-undo-icon">
+<img src="/storage/img/thumb/dustin-w-Undo-icon.png" alt="Undo icon" title="Undo icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="comment">
+ <img src="/storage/img/thumb/comment.png" alt="Comment icon" title="Comment icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="phone-icon-neon-effect">
+<img src="/storage/img/thumb/neon-phone-icon-blue.png" alt="Phone icon neon effect" title="Phone icon neon effect">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="check-box-icon">
+<img src="/storage/img/thumb/Check-box-icon.png" alt="Check box icon" title="Check box icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1538333473">
+<img src="/storage/img/thumb/1538333473.png" alt="Double Arrow Icon" title="Double Arrow Icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="code-break">
+<img src="/storage/img/thumb/code-break.png" alt="code break" title="code break">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="noun-45869-cc">
+<img src="/storage/img/thumb/noun_45869_cc.png" alt="noun 45869 cc" title="noun 45869 cc">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1553127754">
+<img src="/storage/img/thumb/1553127754.png" alt="TikTok icon" title="TikTok icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1553127906">
+<img src="/storage/img/thumb/1553127906.png" alt="TikTok icon" title="TikTok icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1555442443">
+<img src="/storage/img/thumb/1555442443.png" alt="Eye logo silhouette" title="Eye logo silhouette">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="ross-15">
+<img src="/storage/img/thumb/ross -15.png" alt="ross  15" title="ross  15">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="colorize-tool-icon">
+<img src="/storage/img/thumb/1509286095.png" alt="Colorize tool icon" title="Colorize tool icon">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="test-page">
+<img src="/storage/img/thumb/Test-Page.png" alt="Test Page" title="Test Page">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="pause-silhouette">
+<img src="/storage/img/thumb/mono-sppausegame.png" alt="Pause silhouette" title="Pause silhouette">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1538856476">
+<img src="/storage/img/thumb/1538856476.png" alt="Stylized Female Symbol" title="Stylized Female Symbol">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="open-clipart-remix-2">
+<img src="/storage/img/thumb/Open-clipart-remix-2.png" alt="Openclipart Logo" title="Openclipart Logo">
+</a>
+</div></div>
+<div class="photo text-center">
+<div class="photo-thumbnail-wrap">
+<a href="1541611743">
+<img src="/storage/img/thumb/1541611743.png" alt="HTML icon" title="HTML icon">
+</a>
+</div></div>
+<div class='clearfix'></div>
+</div>
+</div>
+</div>
+<div class="sidebar-wrapper">
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4767662663033227" data-ad-slot="2867614028" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div class="sidebar-element tags page-tags">
+<h3>Related tags</h3>
+<div class="tags-wrapper">
+<span><a href="/tag/2018">2018</a></span>
+<span><a href="/tag/about">about</a></span>
+<span><a href="/tag/alert">alert</a></span>
+<span><a href="/tag/altitude">altitude</a></span>
+<span><a href="/tag/announcement">announcement</a></span>
+<span><a href="/tag/arrow">arrow</a></span>
+<span><a href="/tag/B">B</a></span>
+<span><a href="/tag/bin">bin</a></span>
+<span><a href="/tag/binary">binary</a></span>
+<span><a href="/tag/black">black</a></span>
+<span><a href="/tag/blue">blue</a></span>
+<span><a href="/tag/Boston">Boston</a></span>
+<span><a href="/tag/brand">brand</a></span>
+<span><a href="/tag/branding">branding</a></span>
+<span><a href="/tag/break">break</a></span>
+<span><a href="/tag/button">button</a></span>
+<span><a href="/tag/can">can</a></span>
+<span><a href="/tag/cancel">cancel</a></span>
+<span><a href="/tag/cartoon">cartoon</a></span>
+<span><a href="/tag/chair">chair</a></span>
+<span><a href="/tag/character">character</a></span>
+<span><a href="/tag/check">check</a></span>
+<span><a href="/tag/checkmark">checkmark</a></span>
+<span><a href="/tag/Chinese">Chinese</a></span>
+<span><a href="/tag/circle">circle</a></span>
+<span><a href="/tag/circular">circular</a></span>
+<span><a href="/tag/clip-art">clip-art</a></span>
+<span><a href="/tag/close">close</a></span>
+<span><a href="/tag/code">code</a></span>
+<span><a href="/tag/coding">coding</a></span>
+<span><a href="/tag/color">color</a></span>
+<span><a href="/tag/colorize">colorize</a></span>
+<span><a href="/tag/comic">comic</a></span>
+<span><a href="/tag/comment">comment</a></span>
+<span><a href="/tag/computer">computer</a></span>
+<span><a href="/tag/cross">cross</a></span>
+<span><a href="/tag/cup">cup</a></span>
+<span><a href="/tag/cups">cups</a></span>
+<span><a href="/tag/cylinder">cylinder</a></span>
+<span><a href="/tag/dashes">dashes</a></span>
+<span><a href="/tag/design">design</a></span>
+<span><a href="/tag/developer">developer</a></span>
+<span><a href="/tag/direction">direction</a></span>
+<span><a href="/tag/Discovery">Discovery</a></span>
+<span><a href="/tag/door">door</a></span>
+<span><a href="/tag/drinkware">drinkware</a></span>
+<span><a href="/tag/driver">driver</a></span>
+<span><a href="/tag/emoji">emoji</a></span>
+<span><a href="/tag/emoticon">emoticon</a></span>
+<span><a href="/tag/emotion">emotion</a></span>
+<span><a href="/tag/error">error</a></span>
+<span><a href="/tag/eve">eve</a></span>
+<span><a href="/tag/event">event</a></span>
+<span><a href="/tag/eye">eye</a></span>
+<span><a href="/tag/face">face</a></span>
+<span><a href="/tag/fade">fade</a></span>
+<span><a href="/tag/fading">fading</a></span>
+<span><a href="/tag/female">female</a></span>
+<span><a href="/tag/file">file</a></span>
+<span><a href="/tag/finger">finger</a></span>
+<span><a href="/tag/flag">flag</a></span>
+<span><a href="/tag/flat">flat</a></span>
+<span><a href="/tag/font">font</a></span>
+<span><a href="/tag/gender">gender</a></span>
+<span><a href="/tag/girl">girl</a></span>
+<span><a href="/tag/gnome">gnome</a></span>
+<span><a href="/tag/graphics">graphics</a></span>
+<span><a href="/tag/gray">gray</a></span>
+<span><a href="/tag/green">green</a></span>
+<span><a href="/tag/grey">grey</a></span>
+<span><a href="/tag/guide">guide</a></span>
+<span><a href="/tag/hand">hand</a></span>
+<span><a href="/tag/hardware">hardware</a></span>
+<span><a href="/tag/hash">hash</a></span>
+<span><a href="/tag/heart">heart</a></span>
+<span><a href="/tag/help">help</a></span>
+<span><a href="/tag/horizontal">horizontal</a></span>
+<span><a href="/tag/house">house</a></span>
+<span><a href="/tag/html">html</a></span>
+<span><a href="/tag/human">human</a></span>
+<span><a href="/tag/icon">icon</a></span>
+<span><a href="/tag/illustration">illustration</a></span>
+<span><a href="/tag/info">info</a></span>
+<span><a href="/tag/information">information</a></span>
+<span><a href="/tag/key">key</a></span>
+<span><a href="/tag/line">line</a></span>
+<span><a href="/tag/loader">loader</a></span>
+<span><a href="/tag/Logo">Logo</a></span>
+<span><a href="/tag/maximum">maximum</a></span>
+<span><a href="/tag/menu">menu</a></span>
+<span><a href="/tag/minimum">minimum</a></span>
+<span><a href="/tag/monochrome">monochrome</a></span>
+<span><a href="/tag/multimedia">multimedia</a></span>
+<span><a href="/tag/nail">nail</a></span>
+<span><a href="/tag/navigation">navigation</a></span>
+<span><a href="/tag/neon">neon</a></span>
+<span><a href="/tag/number">number</a></span>
+<span><a href="/tag/object">object</a></span>
+<span><a href="/tag/openclipart">openclipart</a></span>
+<span><a href="/tag/oval">oval</a></span>
+</div>
+</div>
+<h3 class="content-heading">More from <a href="https://freesvg.org/by/OpenClipart"> OpenClipart </a> </h3>
+<div class="clearfix">
+<div class="more-from-site">
+<a href="eagle-with-black-wings"><img src="https://freesvg.org/img/eagle.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Eagle With Black Wings"></a>
+<a href="detailed-parrot-polyprismatic-pattern"><img src="https://freesvg.org/img/detailed-parrot-polyprismatic.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Detailed Parrot Polyprismatic Pattern"></a>
+<a href="woman-portrait-polyprismatic-pattern"><img src="https://freesvg.org/img/woman-by-franfer40-polyprismatic.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Woman Portrait Polyprismatic Pattern"></a>
+<a href="vintage-divider-with-floral-decorations"><img src="https://freesvg.org/img/vintage-divider-137.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Vintage Divider With Floral Decorations"></a>
+<a href="pennant-soccer-player-hungary-2021"><img src="https://freesvg.org/img/wimpel-ungarn.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Pennant Soccer player Hungary 2021"></a>
+<a href="retro-jungle-girl"><img src="https://freesvg.org/img/retro-jungle-girl.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Retro jungle girl"></a>
+<a href="vintage-heart-illustration"><img src="https://freesvg.org/img/vintage-heart-illustration.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Vintage Heart Illustration"></a>
+<a href="woman-riding-a-panther"><img src="https://freesvg.org/img/woman-riding-panther.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Woman riding a panther"></a>
+<a href="moai-ancient-statue"><img src="https://freesvg.org/img/moai-easterisland-1958-pd.png?w=80&amp;h=80&amp;fit=fill&amp;fm=png" alt="Moai ancient statue"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<footer class="footer page-section-pt black-bg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3  col-sm-6 xs-mb-30">
+<div class="footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Share</h6>
+<div class="footer-social-big">
+<ul>
+<li class="facebook"><a href="#" onclick="    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;" alt="FB"> <i class="fa fa-facebook"> </i><span>Facebook</span></a> </li>
+<li class="pinterest"><a href="//pinterest.com/pin/create/button/?url=https%3A%2F%2Ffreesvg.org%2F1544641784&media=https%3A%2F%2Ffreesvg.org%2Fimg%2Fmain_bg.jpg&description=Rebuilding open clip art database and community" data-pin-do="buttonPin" data-pin-config="none"> <i class="fa fa-pinterest"> </i><span>Pinterest</span> </a></li>
+<li class="twitter"><a href="https://twitter.com/share?text=https://freesvg.org/1544641784"> <i class="fa fa-twitter"> </i><span>Twitter</span> </a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<div class="footer-useful-link footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Useful links</h6>
+<ul>
+<li><a rel="nofollow" href="https://inkscape.org/">Inkscape</a> </li>
+<li><a rel="nofollow" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">What is SVG</a> </li>
+<li><a rel="nofollow" href="https://svgedit.netlify.app/editor/index.html">SVG Edit</a> </li>
+<li><a rel="nofollow" href="http://www.drawsvg.org/drawsvg.html"> Draw SVG</a> </li>
+<li><a rel="nofollow" href="https://www.w3.org/Graphics/SVG/">SVG Logo</a> </li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6 sm-mb-30 xs-mb-30">
+<h6 class="text-white mb-30 mt-10 text-uppercase">About us</h6>
+<p>FreeSVG.org offers free vector images in SVG format with Creative Commons 0 license (public domain).
+You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+<br />It is absolutely not required, but if you like this website, any mention of or link back is highly appreciated.</p>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<div class="footer-useful-link footer-hedding">
+<h6 class="text-white mb-30 mt-10 text-uppercase">Site links</h6>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/pages/about-us">About</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a rel="nofollow" href="https://creativecommons.org/publicdomain/zero/1.0/ " target="_blank">Public domain license</a></li>
+<li><a rel="nofollow" href="https://forum.freesvg.org " target="_blank">Forum
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 sm-mb-30">
+<a href="https://shutterstock.7eer.net/c/2022575/1294752/1305" target="_blank" id="1178280"><img src="/img/ss300x250.png" border="0" alt="" width="300" height="250" /></a><img height="0" width="0" src="https://shutterstock.7eer.net/i/2022575/1294752/1305" style="position:absolute;visibility:hidden;" border="0" />
+<div class="footer-widget mt-60 ">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<p class="mt-15">
+<a href="#"> Free SVG </a> 2019-2020 </p>
+</div>
+<div class="col-lg-6 col-md-6 ">
+<div class="footer-social mt-10">
+<ul class="text-left text-md-right">
+<li class="list-inline-item"><a href="/pages/api-and-usage">API</a> </li>
+<li class="list-inline-item"><a href="/pages/terms-and-conditions">Terms and conditions </a> </li>
+<li class="list-inline-item"><a href="/pages/privacy-policy">Privacy Policy </a> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer> 
+<script defer src="//stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<script src="https://freesvg.org/js/frontend.js?id=fd71e92afda009fad5db"></script>
+<script src="https://freesvg.org/js/jquerysession.min.js"></script>
+<script src="https://freesvg.org/js/frontend/frontend.min.js"></script>
+<script src="https://freesvg.org/js/select2/select2.min.js"></script>
+<script src="https://freesvg.org/js/share.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {     
+
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+      
+        $('.like').click(function(){    
+            var id = $(this).parents(".panel").data('id');
+            var c = $('#like'+id+'-bs3').html();
+          console.log(c);
+            var cObjId =id;
+            var cObj = $(this);
+             	poruka = $('.like-btn');
+          
+            $.ajax({
+               type:'POST',
+               url:'/like',
+               data:{id:id},
+               success:function(data){
+               
+                 if(data.success<1){
+                
+                    $('#like'+cObjId+'-bs3').html(parseInt(c)-1);
+                    $(cObj).removeClass("like-post");
+                  }else if(data.success>0){
+           
+                    $('#like'+cObjId+'-bs3').html(parseInt(c)+1);
+                    $(cObj).addClass("like-post");
+                  }
+                 else{
+             poruka.addClass("alert alert-error");
+             poruka.html(data.error).slideDown(1000);
+                  
+                  }
+               },
+               
+            });
+
+
+        });      
+      
+            $('.claim').click(function(){    
+            var id = $(this).attr('id');
+            var user=$(this).attr('user');
+            nota = $('#nota');
+             console.log(user);
+            var cObjId =id;
+            var cObj = $(this);
+                    
+            $.ajax({
+               type:'POST',
+               url:'/claim',
+               data:{id:id,
+                     user:user},
+               success:function(data){
+                            
+                 nota.addClass("alert alert-success");
+                 nota.html(data.success).slideDown(1000);
+            
+               },
+               
+            });
+
+
+        });     
+
+                                   
+    }); 
+</script>
+<script>
+$(document).ready(function()
+{
+
+ 
+
+
+    $("#ajax-contact-form").submit(function(e){
+		
+     event.preventDefault();
+            	note = $('#note');
+            var formData = {
+                email     : $('input[name=email]').val(),
+                 _token    : $('input[name=_token]').val()
+                    };
+
+            $.ajax({
+                type     : "POST",
+                url:   '/newsletter',
+                data     : formData,
+                cache    : false,
+
+                success  : function(data) {
+                 note.addClass("alert alert-success");
+                 note.html(data.success).slideDown(1000);
+                }
+            });
+
+
+            return false;
+
+        });
+  
+ 
+
+
+});
+
+</script>
+<div class="js-cookie-consent cookie-consent">
+<span class="cookie-consent__message">
+Your experience on this site will be improved by allowing cookies.
+</span>
+<button class="js-cookie-consent-agree cookie-consent__agree btn btn-green btn-lg">
+Allow cookies
+</button>
+</div>
+<script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'freesvg.org';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15417342d295584c702","applicationID":"525287958","transactionName":"ZgMAZUFTWUJTUhcIXl9JI1JHW1hfHVcRDl9FAwxVHUFBVhxCCw5G","queueTime":0,"applicationTime":111,"atts":"SkQDEwlJSkw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"74dbd4b65b38e293","version":"2022.8.1","r":1,"token":"3c34c81fdd70440c825cf9135891f70a","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

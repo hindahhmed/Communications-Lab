@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<section id="banner">
+  <img src="images/alain-main.png" class="logo">
+<div class="aboutus-text">
+  <section id="team">
+	<div class="container">
+	  <h1>Why Sustainability?</h1>
+	</div>
+
+<div class="f-text">
+	<p> At AlAin, we strive to protect our environment and put it first. Thus, we created 100% biodegradable and compostable bottles made entirely from corn sugars, while the bottle caps are made from fermented sugar cane. We love and cherish our environemt, and choose sustainability. 
+ </p>
+
+</section>
+</section>
+
+
+<div id="sideNav">
+	<nav>
+	<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="video.html">VIDEO</a></li>
+	</ul>
+
+
+</div>
+<div id="menuBtn">
+	<img src="images/menu-icon-8.png" id="menu">
+
+</div>
+
+<script>
+var manuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+
+sideNav.style.right = "-250px";
+
+manuBtn.onclick = function(){
+	if(sideNav.style.right == "-250px"){
+		sideNav.style.right = "0";
+		
+	}
+   else{
+		sideNav.style.right = "-250px";
+		
+	}
+}
+</script>
+

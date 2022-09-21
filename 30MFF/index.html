@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="banner">
+  <img src="images/alain-main.png" class="logo">
+
+  <div class="banner-text">
+  	<h1>ALAIN WATER</h1>
+  	<p>Stay Fresh With AlAin</p>
+  </div>
+</section>
+
+<div id="sideNav">
+	<nav>
+	<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="video.html">VIDEO</a></li>
+	</ul>
+
+</div>
+<div id="menuBtn">
+	<img src="images/menu-icon-8.png" id="menu">
+
+</div>
+
+<!--Features-->
+
+<section id="feature">
+<div class="title-text">
+	
+	<h1>CONTACT US</h1>
+	<div class="social-icons">
+		<a href="https://www.instagram.com/alainwaterofficial/" target="_blank"> 
+			<img src="images/insta.png"></a>
+		 <a href="https://www.facebook.com/alainwater/" target="_blank"> 
+			<img src="images/facebook.png"></a>
+		 <a href="https://mobile.twitter.com/alainwaterme/with_replies" target="_blank"> 
+			<img src="images/twitter.png"></a>
+
+</div>
+</section>
+
+
+
+
+
+
+
+<script>
+var manuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+
+sideNav.style.right = "-250px";
+
+manuBtn.onclick = function(){
+	if(sideNav.style.right == "-250px"){
+		sideNav.style.right = "0";
+		
+	}
+   else{
+		sideNav.style.right = "-250px";
+		
+	}
+}
+</script>
+
+
+
+
+</body>
+</html>
