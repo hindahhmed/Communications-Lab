@@ -6,4 +6,4 @@ AlAin water is a website consisting information revolving around the bottled wat
 
 # PLANNING
 
-While I had created a wireframe for website, it did not involve any interactive elements. 
+While I had created a wireframe for website, it did not involve any interactive elements. I had decided not to follow my wireframe layout and create something interactive instead. 
